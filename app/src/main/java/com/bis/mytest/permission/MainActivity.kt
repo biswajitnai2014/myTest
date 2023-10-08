@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.os.Environment
 import android.provider.Settings
 import com.bis.mytest.R
+import com.bis.mytest.camera.CameraActivity
 import com.bis.mytest.permission.CommonMethod.Companion.createAlertDialog
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         checkPermission()
+        startActivity(Intent(this@MainActivity,CameraActivity::class.java))
     }
 
 
@@ -32,6 +34,9 @@ class MainActivity : AppCompatActivity() {
                             if (!Environment.isExternalStorageManager()) {
                                 dialogAllFileAccessPermissionAbove30()
                             }
+
+                        }
+                        else{
 
                         }
 

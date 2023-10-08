@@ -38,6 +38,9 @@
         tools:targetApi="31">
         <activity
             android:name=".bluetooth.ui.bluetoothUi.BlueToothActivity"
+            android:exported="false" />
+        <activity
+            android:name=".permission.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,7 +49,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".permission.MainActivity"
+            android:name=".camera.CameraActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
